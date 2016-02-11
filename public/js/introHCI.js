@@ -30,18 +30,19 @@ function addProjectDetails(e) {
 
 	console.log("/project/" + idNumber);
 	console.log("User clicked on project " + idNumber);
-
-	$("#div" + projectID).html("foo");
 }
 
 //Added
 function newCallback(result) {
 	var projectHTML = '<a href="#" class="thumbnail">' + 
-	'<img src="' + result['image'] + '" class="detailsImg">' + 
-	'<p><small>' + result['date'] + '</small></p>' + 
+	'<img src="' + result['image'] + '" class="detailsImage">' + 
+	'<h1><small>' + result['date'] + '</small></h1>' + 
 	'<p>' + result['summary'] + '</p></a>';
+
 	console.log(projectHTML);
 	//console.log(result);
+
+	$("#divproject" + result['id']).html(projectHTML);
 }
 
 /*
